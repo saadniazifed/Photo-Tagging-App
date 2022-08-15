@@ -1,6 +1,7 @@
 import "./Header.css";
 import questionMark from "../../media/questionMark.png";
 import leaderboard from "../../media/leaderboard.png";
+import githubLogo from "../../media/githubLogo.png";
 
 export const Header = () => {
   return (
@@ -19,6 +20,7 @@ export const Header = () => {
           Leaderboard
         </li>
         <li className="li--center">
+          <img src={githubLogo} alt="github-logo" />
           <a href="https://github.com/saadniazifed/Photo-Tagging-App">Github</a>
         </li>
       </nav>
