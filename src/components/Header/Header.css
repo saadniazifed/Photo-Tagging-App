@@ -1,0 +1,38 @@
+.header--container {
+  background: rgb(16, 17, 18);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.header--container h1:first-of-type {
+  margin-left: 5rem;
+}
+
+.nav--container {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav--container li {
+  margin-right: 5rem;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+.li--center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
