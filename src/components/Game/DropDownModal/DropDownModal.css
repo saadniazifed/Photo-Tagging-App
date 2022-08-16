@@ -10,3 +10,38 @@
   width: 187px;
   height: 217px;
 }
+
+.Parent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px dashed grey;
+}
+
+.child1 {
+  width: 20%;
+  margin-left: 5px;
+}
+
+.child1 img {
+  max-width: 100%;
+}
+
+.child2 {
+  margin-right: 1rem;
+}
+
+.cancel--btn {
+  position: absolute;
+  right: -0.1rem;
+  top: 0.1rem;
+  margin: 0px 0px 4px auto;
+  border-radius: 100%;
+  background: none;
+  fill: crimson;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
