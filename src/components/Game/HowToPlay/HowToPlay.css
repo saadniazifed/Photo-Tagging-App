@@ -1,0 +1,37 @@
+.how-to-container {
+  position: absolute;
+  left: 30%;
+  min-width: 280px;
+  border-radius: 0.5rem;
+  background: rgb(16, 17, 18);
+  color: rgb(238, 238, 238);
+  padding: 1.5rem;
+  top: 35%;
+}
+
+.images--container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0px;
+  background: rgb(34, 34, 34);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.images--div {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.images--div img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  filter: drop-shadow(rgb(0, 0, 0) 0px 4px 2px);
+}
