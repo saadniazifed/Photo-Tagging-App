@@ -3,7 +3,11 @@ import questionMark from "../../media/questionMark.png";
 import leaderboard from "../../media/leaderboard.png";
 import githubLogo from "../../media/githubLogo.png";
 
-export const Header = () => {
+export const Header = (props) => {
+  const showHowToPlay = props.showHowToPlay;
+  const howToPlayVisible = props.howToPlayVisible;
+  const howToPlayHide = props.howToPlayHide;
+
   return (
     <div className="header--container">
       <h1>
@@ -11,7 +15,7 @@ export const Header = () => {
       </h1>
 
       <nav className="nav--container">
-        <li className="li--center">
+        <li className="li--center" onClick={howToPlayVisible}>
           <img src={questionMark} alt="question-mark" />
           How to Play
         </li>

@@ -1,12 +1,10 @@
 import "./App.css";
-import { Game } from "./components/Game/Game";
-import { Header } from "./components/Header/Header";
+import { Start } from "./components/Start/Start";
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <Game></Game>
+      <Start />
     </>
   );
 }

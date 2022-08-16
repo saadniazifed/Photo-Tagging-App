@@ -1,12 +1,24 @@
 .how-to-container {
   position: absolute;
-  left: 30%;
+  left: 25%;
   min-width: 280px;
   border-radius: 0.5rem;
   background: rgb(16, 17, 18);
   color: rgb(238, 238, 238);
   padding: 1.5rem;
   top: 35%;
+  animation: fadeIn 500ms ease-out backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .images--container {
@@ -34,4 +46,18 @@
   max-height: 100%;
   display: block;
   filter: drop-shadow(rgb(0, 0, 0) 0px 4px 2px);
+}
+
+.cancel--btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  margin: 0px 0px 4px auto;
+  border-radius: 100%;
+  background: none;
+  fill: crimson;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
 }
