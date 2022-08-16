@@ -4,9 +4,8 @@ import leaderboard from "../../media/leaderboard.png";
 import githubLogo from "../../media/githubLogo.png";
 
 export const Header = (props) => {
-  const showHowToPlay = props.showHowToPlay;
   const howToPlayVisible = props.howToPlayVisible;
-  const howToPlayHide = props.howToPlayHide;
+  const leaderboardVisible = props.leaderboardVisible;
 
   return (
     <div className="header--container">
@@ -19,7 +18,7 @@ export const Header = (props) => {
           <img src={questionMark} alt="question-mark" />
           How to Play
         </li>
-        <li className="li--center">
+        <li className="li--center" onClick={leaderboardVisible}>
           <img src={leaderboard} alt="leaderboard" />
           Leaderboard
         </li>

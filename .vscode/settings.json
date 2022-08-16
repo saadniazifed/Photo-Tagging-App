@@ -5,7 +5,9 @@
     "Firestore",
     "Kratos",
     "Leaderboard",
-    "PROJECTID"
+    "Leaderboards",
+    "PROJECTID",
+    "Showleaderboard"
   ],
   "cSpell.customDictionaries": {
     "custom-dictionary-workspace": {
