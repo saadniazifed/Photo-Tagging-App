@@ -32,9 +32,9 @@
   margin-right: 1rem;
 }
 
-.cancel--btn {
+.cancel--btn--dropdown {
   position: absolute;
-  right: -0.1rem;
+  right: 0.1rem;
   top: 0.1rem;
   margin: 0px 0px 4px auto;
   border-radius: 100%;
@@ -43,5 +43,4 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
-  color: white;
 }
