@@ -10,6 +10,7 @@ export const Game = (props) => {
   const [leftCords, setLeftCord] = useState(0);
   const [topCords, setTopCord] = useState(0);
   const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -34,6 +35,11 @@ export const Game = (props) => {
     console.log(`Width:` + width);
   };
 
+  const imageContainerHeight = (e) => {
+    setHeight(e.currentTarget.offsetHeight);
+    console.log(`Height: ` + height);
+  };
+
   const showHowToPlay = props.showHowToPlay;
   const howToPlayHide = props.howToPlayHide;
 
@@ -52,18 +58,20 @@ export const Game = (props) => {
           topCord(e);
           leftCord(e);
           imageContainerWidth(e);
+          imageContainerHeight(e);
         }}
       >
         <img className="bg-image" src={backgroundImage} alt="background-logo" />
+        {showDropDown && (
+          <DropDownModal
+            dropDownHide={dropDownHide}
+            leftCords={leftCords}
+            topCords={topCords}
+            width={width}
+            height={height}
+          />
+        )}
       </div>
-      {showDropDown && (
-        <DropDownModal
-          dropDownHide={dropDownHide}
-          leftCord={leftCords}
-          topCord={topCords}
-          width={width}
-        />
-      )}
     </div>
   );
 };

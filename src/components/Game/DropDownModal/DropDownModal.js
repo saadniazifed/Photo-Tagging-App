@@ -10,14 +10,15 @@ export const DropDownModal = (props) => {
   const leftCords = props.leftCords;
   const topCords = props.topCords;
   const width = props.width;
+  const height = props.height;
 
   return (
-    <>
+    <div>
       <div
         className="dropdown--modal"
         style={{
-          top: 100 * (topCords / width),
-          left: 100 * (leftCords / width),
+          top: `${100 * (topCords / height)}%`,
+          left: `${100 * (leftCords / width)}%`,
         }}
       >
         <div className="Parent">
@@ -71,6 +72,6 @@ export const DropDownModal = (props) => {
           </svg>
         </button>
       </div>
-    </>
+    </div>
   );
 };
