@@ -3,7 +3,7 @@ import { DropDownModal } from "./DropDownModal/DropDownModal";
 import "./Game.css";
 import { HowToPlay } from "./HowToPlay/HowToPlay";
 import { Leaderboard } from "./Leaderboard/Leaderboard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Game = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -11,6 +11,7 @@ export const Game = (props) => {
   const [topCords, setTopCord] = useState(0);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  //Point to note: Fix the bug of useState.
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -22,22 +23,18 @@ export const Game = (props) => {
 
   const topCord = (e) => {
     setTopCord(e.nativeEvent.offsetY);
-    console.log(`Top: ` + topCords);
   };
 
   const leftCord = (e) => {
     setLeftCord(e.nativeEvent.offsetX);
-    console.log(`Left: ` + leftCords);
   };
 
   const imageContainerWidth = (e) => {
     setWidth(e.currentTarget.offsetWidth);
-    console.log(`Width:` + width);
   };
 
   const imageContainerHeight = (e) => {
     setHeight(e.currentTarget.offsetHeight);
-    console.log(`Height: ` + height);
   };
 
   const showHowToPlay = props.showHowToPlay;
@@ -47,10 +44,9 @@ export const Game = (props) => {
   const leaderboardHide = props.leaderboardHide;
 
   return (
-    <div>
+    <div className="image--wrapper">
       {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
       {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
-
       <div className="image--container">
         <img
           className="bg-image"

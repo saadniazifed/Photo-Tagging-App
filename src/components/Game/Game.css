@@ -2,6 +2,7 @@
   width: 100%;
 }
 
-.image--container {
+.image--container,
+.image--wrapper {
   position: relative;
 }
