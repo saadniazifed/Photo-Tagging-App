@@ -7,16 +7,17 @@ import Tom from "../../../media/findCharacters/Tom.png";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
-  const leftCord = props.leftCord;
-  const topCord = props.topCord;
+  const leftCords = props.leftCords;
+  const topCords = props.topCords;
+  const width = props.width;
 
   return (
     <>
       <div
         className="dropdown--modal"
         style={{
-          top: topCord,
-          left: leftCord,
+          top: 100 * (topCords / width),
+          left: 100 * (leftCords / width),
         }}
       >
         <div className="Parent">

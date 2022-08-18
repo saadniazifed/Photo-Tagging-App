@@ -7,6 +7,9 @@ import { useState } from "react";
 
 export const Game = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
+  const [leftCords, setLeftCord] = useState(0);
+  const [topCords, setTopCord] = useState(0);
+  const [width, setWidth] = useState(0);
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -17,15 +20,18 @@ export const Game = (props) => {
   };
 
   const topCord = (e) => {
-    const y = e.offsetY;
-    console.log(y);
-    return y;
+    setTopCord(e.nativeEvent.offsetY);
+    console.log(`Top: ` + topCords);
   };
 
   const leftCord = (e) => {
-    const x = e.offsetX;
-    console.log(x);
-    return x;
+    setLeftCord(e.nativeEvent.offsetX);
+    console.log(`Left: ` + leftCords);
+  };
+
+  const imageContainerWidth = (e) => {
+    setWidth(e.currentTarget.offsetWidth);
+    console.log(`Width:` + width);
   };
 
   const showHowToPlay = props.showHowToPlay;
@@ -39,21 +45,23 @@ export const Game = (props) => {
       {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
       {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
 
-      <img
-        className="bg-image"
-        src={backgroundImage}
-        alt="background-logo"
+      <div
+        className="image--container"
         onClick={(e) => {
           dropDownVisible();
           topCord(e);
           leftCord(e);
+          imageContainerWidth(e);
         }}
-      />
+      >
+        <img className="bg-image" src={backgroundImage} alt="background-logo" />
+      </div>
       {showDropDown && (
         <DropDownModal
           dropDownHide={dropDownHide}
-          leftCord={leftCord}
-          topCord={topCord}
+          leftCord={leftCords}
+          topCord={topCords}
+          width={width}
         />
       )}
     </div>
