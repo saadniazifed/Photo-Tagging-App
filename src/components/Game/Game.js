@@ -51,17 +51,19 @@ export const Game = (props) => {
       {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
       {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
 
-      <div
-        className="image--container"
-        onClick={(e) => {
-          dropDownVisible();
-          topCord(e);
-          leftCord(e);
-          imageContainerWidth(e);
-          imageContainerHeight(e);
-        }}
-      >
-        <img className="bg-image" src={backgroundImage} alt="background-logo" />
+      <div className="image--container">
+        <img
+          className="bg-image"
+          src={backgroundImage}
+          alt="background-logo"
+          onClick={(e) => {
+            dropDownVisible();
+            topCord(e);
+            leftCord(e);
+            imageContainerWidth(e);
+            imageContainerHeight(e);
+          }}
+        />
         {showDropDown && (
           <DropDownModal
             dropDownHide={dropDownHide}
