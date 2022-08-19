@@ -4,6 +4,8 @@ import "./Game.css";
 import { HowToPlay } from "./HowToPlay/HowToPlay";
 import { Leaderboard } from "./Leaderboard/Leaderboard";
 import { useState, useEffect } from "react";
+import { db } from "../../firebase/firebase.config";
+import { collection, getDocs } from "firebase/firestore";
 
 export const Game = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -11,7 +13,18 @@ export const Game = (props) => {
   const [topCords, setTopCord] = useState(0);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
-  //Point to note: Fix the bug of useState.
+
+  const [characters, setCharacters] = useState([]);
+  const charactersRef = collection(db, "character-locations");
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(charactersRef);
+      setCharacters(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getUsers();
+  }, [charactersRef]);
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -23,18 +36,22 @@ export const Game = (props) => {
 
   const topCord = (e) => {
     setTopCord(e.nativeEvent.offsetY);
+    console.log(topCords);
   };
 
   const leftCord = (e) => {
     setLeftCord(e.nativeEvent.offsetX);
+    console.log(leftCords);
   };
 
   const imageContainerWidth = (e) => {
     setWidth(e.currentTarget.offsetWidth);
+    console.log(`Width: ` + width);
   };
 
   const imageContainerHeight = (e) => {
     setHeight(e.currentTarget.offsetHeight);
+    console.log(`Height: ` + height);
   };
 
   const showHowToPlay = props.showHowToPlay;
