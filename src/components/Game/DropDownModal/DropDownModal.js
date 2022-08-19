@@ -60,7 +60,18 @@ export const DropDownModal = (props) => {
   };
 
   const linkLocation = () => {
-    console.log("Link Location");
+    const linkTop = characters[3].LinkTop;
+    const linkLeft = characters[3].LinkLeft;
+
+    console.log(roundTop);
+    console.log(roundLeft);
+
+    if (
+      ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
+      ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
+    ) {
+      console.log("Link is found!");
+    }
   };
 
   const tomLocation = () => {
