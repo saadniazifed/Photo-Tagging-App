@@ -17,6 +17,12 @@
   flex-direction: row;
   align-items: center;
   border-bottom: 1px dashed grey;
+  cursor: pointer;
+}
+
+.Parent:hover {
+  background-color: lightgray;
+  color: black;
 }
 
 .child1 {

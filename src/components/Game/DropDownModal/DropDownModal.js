@@ -1,9 +1,5 @@
 import "./DropDownModal.css";
-import Chris from "../../../media/findCharacters/Chris.png";
-import Dog from "../../../media/findCharacters/BrianGriffin.png";
-import Kratos from "../../../media/findCharacters/Kratos.png";
-import Link from "../../../media/findCharacters/Link.png";
-import Tom from "../../../media/findCharacters/Tom.png";
+import { characterData } from "./DropDownData";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
@@ -21,7 +17,15 @@ export const DropDownModal = (props) => {
           left: `${100 * (leftCords / width)}%`,
         }}
       >
-        <div className="Parent">
+        {characterData.map((character) => {
+          return (
+            <div className="Parent">
+              <div className="child1">{character.imageURL}</div>
+              <div className="child2">{character.name}</div>
+            </div>
+          );
+        })}
+        {/* <div className="Parent">
           <div className="child1">
             <img src={Chris} alt="Chris-family-guy" />
           </div>
@@ -64,7 +68,7 @@ export const DropDownModal = (props) => {
           <div className="child2">
             <p>Tom</p>
           </div>
-        </div>
+        </div> */}
 
         <button className="cancel--btn--dropdown" onClick={dropDownHide}>
           <svg xmlns="" width="14" height="14" viewBox="0 0 24 24">
