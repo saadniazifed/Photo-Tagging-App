@@ -32,13 +32,13 @@
 }
 
 .link-green-tick {
-  position: fixed;
-  /* top: -310px;
-  left: 290px; */
+  position: absolute;
+  top: 5740px;
+  left: 290px;
 }
 
 .tom-green-tick {
-  position: fixed;
-  /* top: -360px;
-  left: 1210px; */
+  position: absolute;
+  top: 5740px;
+  left: 1210px;
 }
