@@ -20,9 +20,9 @@
 }
 
 .griffin-green-tick {
-  position: fixed;
-  /* top: -1820px;
-  left: 160px; */
+  position: absolute;
+  top: 4320px;
+  left: 160px;
 }
 
 .kratos-green-tick {
