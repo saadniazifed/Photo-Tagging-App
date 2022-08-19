@@ -22,7 +22,6 @@ export const Game = (props) => {
       const data = await getDocs(charactersRef);
       setCharacters(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
-    console.log(characters);
 
     getUsers();
   }, []);

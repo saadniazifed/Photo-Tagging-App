@@ -22,19 +22,41 @@ export const DropDownModal = (props) => {
     const chrisTop = characters[0].ChrisTop;
     const chrisLeft = characters[0].ChrisLeft;
     if (
-      (roundTop >= 92 || roundTop === chrisTop) &&
-      (roundLeft >= 92 || roundLeft === chrisLeft)
+      ((roundTop >= 92 && roundTop <= 94) || roundTop === chrisTop) &&
+      ((roundTop >= 91 && roundTop <= 94) || roundLeft === chrisLeft)
     ) {
       console.log("Chris is found!");
     }
   };
 
   const griffinLocation = () => {
-    console.log("Griffin Location");
+    const griffinTop = characters[1].GriffinTop;
+    const griffinLeft = characters[1].GriffinLeft;
+
+    console.log(roundTop);
+    console.log(roundLeft);
+
+    if (
+      ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
+      ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
+    ) {
+      console.log("Griffin is found!");
+    }
   };
 
   const kratosLocation = () => {
-    console.log("Griffin Location");
+    const kratosTop = characters[2].KratosTop;
+    const kratosLeft = characters[2].KratosLeft;
+
+    console.log(roundTop);
+    console.log(roundLeft);
+
+    if (
+      ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
+      ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
+    ) {
+      console.log("Kratos is found!");
+    }
   };
 
   const linkLocation = () => {
