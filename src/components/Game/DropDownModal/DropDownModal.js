@@ -12,6 +12,11 @@ export const DropDownModal = (props) => {
   const width = props.width;
   const height = props.height;
   const characters = props.characters;
+  const setChrisFound = props.setChrisFound;
+  const setGriffinFound = props.setGriffinFound;
+  const setKratosFound = props.setKratosFound;
+  const setLinkFound = props.setLinkFound;
+  const setTomFound = props.setTomFound;
 
   const top = `${100 * (topCords / height)}`;
   const left = `${100 * (leftCords / width)}`;
@@ -25,7 +30,7 @@ export const DropDownModal = (props) => {
       ((roundTop >= 92 && roundTop <= 94) || roundTop === chrisTop) &&
       ((roundTop >= 91 && roundTop <= 94) || roundLeft === chrisLeft)
     ) {
-      console.log("Chris is found!");
+      setChrisFound(true);
     }
   };
 
@@ -40,7 +45,7 @@ export const DropDownModal = (props) => {
       ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
       ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
     ) {
-      console.log("Griffin is found!");
+      setGriffinFound(true);
     }
   };
 
@@ -55,7 +60,7 @@ export const DropDownModal = (props) => {
       ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
       ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
     ) {
-      console.log("Kratos is found!");
+      setKratosFound(true);
     }
   };
 
@@ -70,12 +75,23 @@ export const DropDownModal = (props) => {
       ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
       ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
     ) {
-      console.log("Link is found!");
+      setLinkFound(true);
     }
   };
 
   const tomLocation = () => {
-    console.log("Tom Location");
+    const tomTop = characters[4].TomTop;
+    const tomLeft = characters[4].TomLeft;
+
+    console.log(roundTop);
+    console.log(roundLeft);
+
+    if (
+      ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
+      ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
+    ) {
+      setTomFound(true);
+    }
   };
 
   return (

@@ -12,3 +12,33 @@
 .image--wrapper {
   position: relative;
 }
+
+.chris-green-tick {
+  position: absolute;
+  top: 5641px;
+  left: 1324px;
+}
+
+.griffin-green-tick {
+  position: fixed;
+  /* top: -1820px;
+  left: 160px; */
+}
+
+.kratos-green-tick {
+  position: fixed;
+  /* top: -820px;
+  left: 810px; */
+}
+
+.link-green-tick {
+  position: fixed;
+  /* top: -310px;
+  left: 290px; */
+}
+
+.tom-green-tick {
+  position: fixed;
+  /* top: -360px;
+  left: 1210px; */
+}
