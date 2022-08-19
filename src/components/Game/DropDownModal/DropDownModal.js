@@ -25,50 +25,6 @@ export const DropDownModal = (props) => {
             </div>
           );
         })}
-        {/* <div className="Parent">
-          <div className="child1">
-            <img src={Chris} alt="Chris-family-guy" />
-          </div>
-          <div className="child2">
-            <p>Chris</p>
-          </div>
-        </div>
-
-        <div className="Parent">
-          <div className="child1">
-            <img src={Dog} alt="Griffin-family-guy" />
-          </div>
-          <div className="child2">
-            <p>Griffin</p>
-          </div>
-        </div>
-
-        <div className="Parent">
-          <div className="child1">
-            <img src={Kratos} alt="Kratos" />
-          </div>
-          <div className="child2">
-            <p>Kratos</p>
-          </div>
-        </div>
-
-        <div className="Parent">
-          <div className="child1">
-            <img src={Link} alt="Kratos" />
-          </div>
-          <div className="child2">
-            <p>Link</p>
-          </div>
-        </div>
-
-        <div className="Parent">
-          <div className="child1">
-            <img src={Tom} alt="Kratos" />
-          </div>
-          <div className="child2">
-            <p>Tom</p>
-          </div>
-        </div> */}
 
         <button className="cancel--btn--dropdown" onClick={dropDownHide}>
           <svg xmlns="" width="14" height="14" viewBox="0 0 24 24">

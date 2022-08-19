@@ -65,17 +65,22 @@ export const Game = (props) => {
     <div className="image--wrapper">
       {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
       {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
-      <div className="image--container">
+      <div
+        className="image--container"
+        onClick={(e) => {
+          dropDownVisible(e);
+          topCord(e);
+          leftCord(e);
+          imageContainerWidth(e);
+          imageContainerHeight(e);
+        }}
+      >
         <img
           className="bg-image"
           src={backgroundImage}
           alt="background-logo"
           onClick={(e) => {
-            dropDownVisible();
-            topCord(e);
-            leftCord(e);
-            imageContainerWidth(e);
-            imageContainerHeight(e);
+            dropDownVisible(e);
           }}
         />
         {showDropDown && (
