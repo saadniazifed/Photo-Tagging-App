@@ -26,9 +26,9 @@
 }
 
 .kratos-green-tick {
-  position: fixed;
-  /* top: -820px;
-  left: 810px; */
+  position: absolute;
+  top: 5250px;
+  left: 810px;
 }
 
 .link-green-tick {

@@ -123,6 +123,13 @@ export const Game = (props) => {
           />
         )}
 
+        <img
+          src={greenCheck}
+          alt="link-found"
+          className="link-green-tick"
+          // style={linkFound ? { display: "block" } : { display: "none" }}
+        />
+
         {tomFound && (
           <img
             src={greenCheck}
