@@ -1,5 +1,9 @@
 import "./DropDownModal.css";
-import { characterData } from "./DropDownData";
+import Chris from "../../../media/findCharacters/Chris.png";
+import Dog from "../../../media/findCharacters/BrianGriffin.png";
+import Kratos from "../../../media/findCharacters/Kratos.png";
+import Link from "../../../media/findCharacters/Link.png";
+import Tom from "../../../media/findCharacters/Tom.png";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
@@ -7,24 +11,93 @@ export const DropDownModal = (props) => {
   const topCords = props.topCords;
   const width = props.width;
   const height = props.height;
+  const characters = props.characters;
+
+  const top = `${100 * (topCords / height)}`;
+  const left = `${100 * (leftCords / width)}`;
+  const roundTop = Math.round(top);
+  const roundLeft = Math.round(left);
+
+  const chrisLocation = () => {
+    const chrisTop = characters[0].ChrisTop;
+    const chrisLeft = characters[0].ChrisLeft;
+    if (
+      (roundTop >= 92 || roundTop === chrisTop) &&
+      (roundLeft >= 92 || roundLeft === chrisLeft)
+    ) {
+      console.log("Chris is found!");
+    }
+  };
+
+  const griffinLocation = () => {
+    console.log("Griffin Location");
+  };
+
+  const kratosLocation = () => {
+    console.log("Griffin Location");
+  };
+
+  const linkLocation = () => {
+    console.log("Link Location");
+  };
+
+  const tomLocation = () => {
+    console.log("Tom Location");
+  };
 
   return (
     <div>
       <div
         className="dropdown--modal"
         style={{
-          top: `${100 * (topCords / height)}%`,
-          left: `${100 * (leftCords / width)}%`,
+          top: `${top}%`,
+          left: `${left}%`,
         }}
       >
-        {characterData.map((character) => {
-          return (
-            <div className="Parent">
-              <div className="child1">{character.imageURL}</div>
-              <div className="child2">{character.name}</div>
-            </div>
-          );
-        })}
+        <div className="Parent" onClick={chrisLocation}>
+          <div className="child1">
+            <img src={Chris} alt="Chris-family-guy" />
+          </div>
+          <div className="child2">
+            <p>Chris</p>
+          </div>
+        </div>
+
+        <div className="Parent" onClick={griffinLocation}>
+          <div className="child1">
+            <img src={Dog} alt="Griffin-family-guy" />
+          </div>
+          <div className="child2">
+            <p>Griffin</p>
+          </div>
+        </div>
+
+        <div className="Parent" onClick={kratosLocation}>
+          <div className="child1">
+            <img src={Kratos} alt="Kratos" />
+          </div>
+          <div className="child2">
+            <p>Kratos</p>
+          </div>
+        </div>
+
+        <div className="Parent" onClick={linkLocation}>
+          <div className="child1">
+            <img src={Link} alt="Link" />
+          </div>
+          <div className="child2">
+            <p>Link</p>
+          </div>
+        </div>
+
+        <div className="Parent" onClick={tomLocation}>
+          <div className="child1">
+            <img src={Tom} alt="Tom" />
+          </div>
+          <div className="child2">
+            <p>Tom</p>
+          </div>
+        </div>
 
         <button className="cancel--btn--dropdown" onClick={dropDownHide}>
           <svg xmlns="" width="14" height="14" viewBox="0 0 24 24">

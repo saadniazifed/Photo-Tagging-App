@@ -31,28 +31,29 @@ export const Game = (props) => {
     setShowDropDown(true);
   };
 
-  const dropDownHide = () => {
+  const dropDownHide = (e) => {
+    e.stopPropagation();
     setShowDropDown(false);
   };
 
   const topCord = (e) => {
     setTopCord(e.nativeEvent.offsetY);
-    console.log(topCords);
+    // console.log(`Top: ` + topCords);
   };
 
   const leftCord = (e) => {
     setLeftCord(e.nativeEvent.offsetX);
-    console.log(leftCords);
+    // console.log(`Left: ` + leftCords);
   };
 
   const imageContainerWidth = (e) => {
     setWidth(e.currentTarget.offsetWidth);
-    console.log(`Width: ` + width);
+    // console.log(`Width: ` + width);
   };
 
   const imageContainerHeight = (e) => {
     setHeight(e.currentTarget.offsetHeight);
-    console.log(`Height: ` + height);
+    // console.log(`Height: ` + height);
   };
 
   const showHowToPlay = props.showHowToPlay;
@@ -90,6 +91,7 @@ export const Game = (props) => {
             topCords={topCords}
             width={width}
             height={height}
+            characters={characters}
           />
         )}
       </div>
