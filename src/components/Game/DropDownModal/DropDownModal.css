@@ -11,7 +11,11 @@
   height: 217px;
 }
 
-.Parent {
+.chrisParent,
+.griffinParent,
+.kratosParent,
+.linkParent,
+.tomParent {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -20,7 +24,27 @@
   cursor: pointer;
 }
 
-.Parent:hover {
+.chrisParent:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.tomParent:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.linkParent:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.kratosParent:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.griffinParent:hover {
   background-color: lightgray;
   color: black;
 }

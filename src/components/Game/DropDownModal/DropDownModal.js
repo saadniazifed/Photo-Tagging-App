@@ -4,6 +4,7 @@ import Dog from "../../../media/findCharacters/BrianGriffin.png";
 import Kratos from "../../../media/findCharacters/Kratos.png";
 import Link from "../../../media/findCharacters/Link.png";
 import Tom from "../../../media/findCharacters/Tom.png";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
@@ -23,7 +24,8 @@ export const DropDownModal = (props) => {
   const roundTop = Math.round(top);
   const roundLeft = Math.round(left);
 
-  const chrisLocation = () => {
+  const chrisLocation = (e) => {
+    console.log(e.target);
     const chrisTop = characters[0].ChrisTop;
     const chrisLeft = characters[0].ChrisLeft;
     if (
@@ -31,15 +33,15 @@ export const DropDownModal = (props) => {
       ((roundTop >= 91 && roundTop <= 94) || roundLeft === chrisLeft)
     ) {
       setChrisFound(true);
+      const parentNode = e.target.parentNode.parentNode;
+      parentNode.setAttribute("style", "pointer-events: none");
+      console.log(parentNode);
     }
   };
 
   const griffinLocation = () => {
     const griffinTop = characters[1].GriffinTop;
     const griffinLeft = characters[1].GriffinLeft;
-
-    console.log(roundTop);
-    console.log(roundLeft);
 
     if (
       ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
@@ -53,9 +55,6 @@ export const DropDownModal = (props) => {
     const kratosTop = characters[2].KratosTop;
     const kratosLeft = characters[2].KratosLeft;
 
-    console.log(roundTop);
-    console.log(roundLeft);
-
     if (
       ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
       ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
@@ -68,9 +67,6 @@ export const DropDownModal = (props) => {
     const linkTop = characters[3].LinkTop;
     const linkLeft = characters[3].LinkLeft;
 
-    console.log(roundTop);
-    console.log(roundLeft);
-
     if (
       ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
       ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
@@ -82,9 +78,6 @@ export const DropDownModal = (props) => {
   const tomLocation = () => {
     const tomTop = characters[4].TomTop;
     const tomLeft = characters[4].TomLeft;
-
-    console.log(roundTop);
-    console.log(roundLeft);
 
     if (
       ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
@@ -103,7 +96,7 @@ export const DropDownModal = (props) => {
           left: `${left}%`,
         }}
       >
-        <div className="Parent" onClick={chrisLocation}>
+        <div className="chrisParent" onClick={(e) => chrisLocation(e)}>
           <div className="child1">
             <img src={Chris} alt="Chris-family-guy" />
           </div>
@@ -112,7 +105,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="Parent" onClick={griffinLocation}>
+        <div className="griffinParent" onClick={griffinLocation}>
           <div className="child1">
             <img src={Dog} alt="Griffin-family-guy" />
           </div>
@@ -121,7 +114,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="Parent" onClick={kratosLocation}>
+        <div className="kratosParent" onClick={kratosLocation}>
           <div className="child1">
             <img src={Kratos} alt="Kratos" />
           </div>
@@ -130,7 +123,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="Parent" onClick={linkLocation}>
+        <div className="linkParent" onClick={linkLocation}>
           <div className="child1">
             <img src={Link} alt="Link" />
           </div>
@@ -139,7 +132,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="Parent" onClick={tomLocation}>
+        <div className="tomParent" onClick={tomLocation}>
           <div className="child1">
             <img src={Tom} alt="Tom" />
           </div>
