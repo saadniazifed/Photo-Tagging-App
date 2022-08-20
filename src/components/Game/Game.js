@@ -66,8 +66,6 @@ export const Game = (props) => {
 
   return (
     <div className="image--wrapper">
-      {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
-      {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
       <div
         className="image--container"
         onClick={(e) => {
@@ -78,6 +76,8 @@ export const Game = (props) => {
           imageContainerHeight(e);
         }}
       >
+        {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
+        {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
         <img
           className="bg-image"
           src={backgroundImage}

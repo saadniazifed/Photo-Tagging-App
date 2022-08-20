@@ -6,7 +6,7 @@
   background: rgb(16, 17, 18);
   color: rgb(238, 238, 238);
   padding: 1.5rem;
-  top: 35%;
+  top: 200px;
   animation: fadeIn 500ms ease-out backwards;
 }
 
