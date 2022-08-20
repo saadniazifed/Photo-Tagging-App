@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Photo-Tagging-App/static/css/main.073c9b0a.css",
-    "main.js": "/Photo-Tagging-App/static/js/main.b2084168.js",
-    "static/js/787.6eec3de1.chunk.js": "/Photo-Tagging-App/static/js/787.6eec3de1.chunk.js",
-    "static/media/logo.svg": "/Photo-Tagging-App/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/Photo-Tagging-App/static/css/main.8ae373fb.css",
+    "main.js": "/Photo-Tagging-App/static/js/main.7202a97b.js",
+    "static/media/background.jpg": "/Photo-Tagging-App/static/media/background.dd4f281e4813b6d82238.jpg",
+    "static/media/SignikaNegative-Regular.ttf": "/Photo-Tagging-App/static/media/SignikaNegative-Regular.79afd25c52e994e2ec40.ttf",
+    "static/media/PTMono-Regular.ttf": "/Photo-Tagging-App/static/media/PTMono-Regular.295a1f32faf05a5784d8.ttf",
+    "static/media/Tom.png": "/Photo-Tagging-App/static/media/Tom.6a0ec116e8d8e96d7648.png",
+    "static/media/Chris.png": "/Photo-Tagging-App/static/media/Chris.bf20920c507a8307fe24.png",
+    "static/media/Silkscreen-Regular.ttf": "/Photo-Tagging-App/static/media/Silkscreen-Regular.55c63cb6117763b21c84.ttf",
+    "static/media/BrianGriffin.png": "/Photo-Tagging-App/static/media/BrianGriffin.487d808998d7ca7e573f.png",
     "index.html": "/Photo-Tagging-App/index.html",
-    "main.073c9b0a.css.map": "/Photo-Tagging-App/static/css/main.073c9b0a.css.map",
-    "main.b2084168.js.map": "/Photo-Tagging-App/static/js/main.b2084168.js.map",
-    "787.6eec3de1.chunk.js.map": "/Photo-Tagging-App/static/js/787.6eec3de1.chunk.js.map"
+    "main.8ae373fb.css.map": "/Photo-Tagging-App/static/css/main.8ae373fb.css.map",
+    "main.7202a97b.js.map": "/Photo-Tagging-App/static/js/main.7202a97b.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.b2084168.js"
+    "static/css/main.8ae373fb.css",
+    "static/js/main.7202a97b.js"
   ]
 }
