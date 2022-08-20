@@ -61,8 +61,9 @@ export const DropDownModal = (props) => {
     ) {
       setKratosFound(true);
       const parentNode = e.target;
+      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      console.log(parentNode);
+      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
