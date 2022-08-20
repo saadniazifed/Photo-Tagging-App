@@ -66,7 +66,7 @@ export const DropDownModal = (props) => {
     }
   };
 
-  const linkLocation = () => {
+  const linkLocation = (e) => {
     const linkTop = characters[3].LinkTop;
     const linkLeft = characters[3].LinkLeft;
 
@@ -75,6 +75,9 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
     ) {
       setLinkFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+      console.log(parentNode);
     }
   };
 
@@ -126,7 +129,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="linkParent" onClick={linkLocation}>
+        <div className="linkParent" onClick={(e) => linkLocation(e)}>
           <div className="child1">
             <img src={Link} alt="Link" />
           </div>
