@@ -39,7 +39,7 @@ export const DropDownModal = (props) => {
     }
   };
 
-  const griffinLocation = () => {
+  const griffinLocation = (e) => {
     const griffinTop = characters[1].GriffinTop;
     const griffinLeft = characters[1].GriffinLeft;
 
@@ -48,6 +48,8 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
     ) {
       setGriffinFound(true);
+      const parentNode = e.target.parentNode.parentNode;
+      parentNode.setAttribute("style", "pointer-events: none");
     }
   };
 
@@ -105,7 +107,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="griffinParent" onClick={griffinLocation}>
+        <div className="griffinParent" onClick={(e) => griffinLocation(e)}>
           <div className="child1">
             <img src={Dog} alt="Griffin-family-guy" />
           </div>
