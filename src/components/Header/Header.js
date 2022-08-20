@@ -5,7 +5,6 @@ import githubLogo from "../../media/githubLogo.png";
 
 export const Header = (props) => {
   const howToPlayVisible = props.howToPlayVisible;
-  const leaderboardVisible = props.leaderboardVisible;
 
   return (
     <div className="header--container">

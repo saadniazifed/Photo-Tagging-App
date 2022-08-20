@@ -33,9 +33,7 @@ export const DropDownModal = (props) => {
     ) {
       setChrisFound(true);
       const parentNode = e.target;
-      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
@@ -49,9 +47,7 @@ export const DropDownModal = (props) => {
     ) {
       setGriffinFound(true);
       const parentNode = e.target;
-      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
@@ -65,9 +61,7 @@ export const DropDownModal = (props) => {
     ) {
       setKratosFound(true);
       const parentNode = e.target;
-      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
@@ -81,9 +75,7 @@ export const DropDownModal = (props) => {
     ) {
       setLinkFound(true);
       const parentNode = e.target;
-      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
@@ -97,9 +89,7 @@ export const DropDownModal = (props) => {
     ) {
       setTomFound(true);
       const parentNode = e.target;
-      const childNode = parentNode.childNodes[1];
       parentNode.setAttribute("style", "pointer-events: none");
-      childNode.setAttribute("style", "text-decoration: line-through");
     }
   };
 
