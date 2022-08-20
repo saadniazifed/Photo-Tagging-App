@@ -38,7 +38,6 @@ export const HowToPlay = (props) => {
         </div>
         <p className="information--p">
           Once you find one, left-click it and select the appropriate character.
-          The faster you spot them, the higher your ranking will be!
         </p>
         <p>Enjoy!</p>
       </div>

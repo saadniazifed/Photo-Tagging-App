@@ -4,7 +4,6 @@ import Dog from "../../../media/findCharacters/BrianGriffin.png";
 import Kratos from "../../../media/findCharacters/Kratos.png";
 import Link from "../../../media/findCharacters/Link.png";
 import Tom from "../../../media/findCharacters/Tom.png";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
