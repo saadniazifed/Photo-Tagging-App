@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Photo-Tagging-App/static/css/main.8ae373fb.css",
-    "main.js": "/Photo-Tagging-App/static/js/main.7202a97b.js",
+    "main.js": "/Photo-Tagging-App/static/js/main.49955e02.js",
     "static/media/background.jpg": "/Photo-Tagging-App/static/media/background.dd4f281e4813b6d82238.jpg",
     "static/media/SignikaNegative-Regular.ttf": "/Photo-Tagging-App/static/media/SignikaNegative-Regular.79afd25c52e994e2ec40.ttf",
     "static/media/PTMono-Regular.ttf": "/Photo-Tagging-App/static/media/PTMono-Regular.295a1f32faf05a5784d8.ttf",
@@ -11,10 +11,10 @@
     "static/media/BrianGriffin.png": "/Photo-Tagging-App/static/media/BrianGriffin.487d808998d7ca7e573f.png",
     "index.html": "/Photo-Tagging-App/index.html",
     "main.8ae373fb.css.map": "/Photo-Tagging-App/static/css/main.8ae373fb.css.map",
-    "main.7202a97b.js.map": "/Photo-Tagging-App/static/js/main.7202a97b.js.map"
+    "main.49955e02.js.map": "/Photo-Tagging-App/static/js/main.49955e02.js.map"
   },
   "entrypoints": [
     "static/css/main.8ae373fb.css",
-    "static/js/main.7202a97b.js"
+    "static/js/main.49955e02.js"
   ]
 }
