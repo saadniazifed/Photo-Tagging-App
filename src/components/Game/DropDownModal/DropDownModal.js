@@ -46,6 +46,8 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
     ) {
       setGriffinFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
     }
   };
 
