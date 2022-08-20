@@ -81,7 +81,7 @@ export const DropDownModal = (props) => {
     }
   };
 
-  const tomLocation = () => {
+  const tomLocation = (e) => {
     const tomTop = characters[4].TomTop;
     const tomLeft = characters[4].TomLeft;
 
@@ -90,6 +90,9 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
     ) {
       setTomFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+      console.log(parentNode);
     }
   };
 
@@ -138,7 +141,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="tomParent" onClick={tomLocation}>
+        <div className="tomParent" onClick={(e) => tomLocation(e)}>
           <div className="child1">
             <img src={Tom} alt="Tom" />
           </div>
