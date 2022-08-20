@@ -51,7 +51,7 @@ export const DropDownModal = (props) => {
     }
   };
 
-  const kratosLocation = () => {
+  const kratosLocation = (e) => {
     const kratosTop = characters[2].KratosTop;
     const kratosLeft = characters[2].KratosLeft;
 
@@ -60,6 +60,9 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
     ) {
       setKratosFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+      console.log(parentNode);
     }
   };
 
@@ -114,7 +117,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="kratosParent" onClick={kratosLocation}>
+        <div className="kratosParent" onClick={(e) => kratosLocation(e)}>
           <div className="child1">
             <img src={Kratos} alt="Kratos" />
           </div>
