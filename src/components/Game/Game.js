@@ -2,7 +2,6 @@ import backgroundImage from "../../media/background.jpg";
 import { DropDownModal } from "./DropDownModal/DropDownModal";
 import "./Game.css";
 import { HowToPlay } from "./HowToPlay/HowToPlay";
-import { Leaderboard } from "./Leaderboard/Leaderboard";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase/firebase.config";
 import { collection, getDocs } from "firebase/firestore";
@@ -61,9 +60,6 @@ export const Game = (props) => {
   const showHowToPlay = props.showHowToPlay;
   const howToPlayHide = props.howToPlayHide;
 
-  const showLeaderboard = props.showLeaderboard;
-  const leaderboardHide = props.leaderboardHide;
-
   return (
     <div className="image--wrapper">
       <div
@@ -77,7 +73,6 @@ export const Game = (props) => {
         }}
       >
         {showHowToPlay && <HowToPlay howToPlayHide={howToPlayHide} />}
-        {showLeaderboard && <Leaderboard leaderboardHide={leaderboardHide} />}
         <img
           className="bg-image"
           src={backgroundImage}

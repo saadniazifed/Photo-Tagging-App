@@ -18,10 +18,6 @@ export const Header = (props) => {
           <img src={questionMark} alt="question-mark" />
           How to Play
         </li>
-        <li className="li--center" onClick={leaderboardVisible}>
-          <img src={leaderboard} alt="leaderboard" />
-          Leaderboard
-        </li>
         <li className="li--center">
           <img src={githubLogo} alt="github-logo" />
           <a href="https://github.com/saadniazifed/Photo-Tagging-App">Github</a>
