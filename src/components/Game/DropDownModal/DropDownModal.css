@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Signika;
+  src: url("../../../media/fonts/SignikaNegative-Regular.ttf");
+}
+
 .dropdown--modal {
   position: absolute;
   margin: 5px 0px 0px 5px;
@@ -60,6 +65,7 @@
 
 .child2 {
   margin-right: 1rem;
+  font-family: Signika;
 }
 
 .cancel--btn--dropdown {
