@@ -113,10 +113,10 @@ export const DropDownModal = (props) => {
 
         <div className="griffinParent" onClick={(e) => griffinLocation(e)}>
           <div className="child1">
-            <img src={Dog} alt="Griffin-family-guy" />
+            <img src={Dog} alt="Brian-family-guy" />
           </div>
           <div className="child2">
-            <p>Griffin</p>
+            <p>Brian</p>
           </div>
         </div>
 
