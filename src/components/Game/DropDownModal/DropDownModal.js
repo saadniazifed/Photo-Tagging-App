@@ -63,11 +63,10 @@ export const DropDownModal = (props) => {
       setKratosFound(true);
       const parentNode = e.target.parentNode.parentNode;
       parentNode.setAttribute("style", "pointer-events: none");
-      console.log(parentNode);
     }
   };
 
-  const linkLocation = () => {
+  const linkLocation = (e) => {
     const linkTop = characters[3].LinkTop;
     const linkLeft = characters[3].LinkLeft;
 
@@ -76,10 +75,12 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
     ) {
       setLinkFound(true);
+      const parentNode = e.target.parentNode.parentNode;
+      parentNode.setAttribute("style", "pointer-events: none");
     }
   };
 
-  const tomLocation = () => {
+  const tomLocation = (e) => {
     const tomTop = characters[4].TomTop;
     const tomLeft = characters[4].TomLeft;
 
@@ -88,6 +89,8 @@ export const DropDownModal = (props) => {
       ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
     ) {
       setTomFound(true);
+      const parentNode = e.target.parentNode.parentNode;
+      parentNode.setAttribute("style", "pointer-events: none");
     }
   };
 
@@ -127,7 +130,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="linkParent" onClick={linkLocation}>
+        <div className="linkParent" onClick={(e) => linkLocation(e)}>
           <div className="child1">
             <img src={Link} alt="Link" />
           </div>
@@ -136,7 +139,7 @@ export const DropDownModal = (props) => {
           </div>
         </div>
 
-        <div className="tomParent" onClick={tomLocation}>
+        <div className="tomParent" onClick={(e) => tomLocation(e)}>
           <div className="child1">
             <img src={Tom} alt="Tom" />
           </div>
