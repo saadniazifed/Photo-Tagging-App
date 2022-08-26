@@ -14,3 +14,13 @@ This is the [First Firebase Project](https://www.theodinproject.com/lessons/node
 <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
 </p>
+
+## app features
+
+1. the backend stores the targets' location data so the user can't cheat in the game.
+2. validates target locations dynamically by coupling the backend's relative location data of the targets with the frontend's absolute positioning data.
+3. feedback is given to the user when targets are correctly located.
+
+## areas for improvement
+
+1. improve responsiveness across browsers and devices.
