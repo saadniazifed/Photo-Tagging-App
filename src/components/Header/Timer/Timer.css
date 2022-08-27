@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Silkscreen;
+  src: url("../../../media/fonts/Silkscreen-Regular.ttf");
+}
+
+span {
+  font-family: Silkscreen;
+}

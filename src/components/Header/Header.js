@@ -2,6 +2,7 @@ import "./Header.css";
 import questionMark from "../../media/questionMark.png";
 import leaderboard from "../../media/leaderboard.png";
 import githubLogo from "../../media/githubLogo.png";
+import Timer from "./Timer/Timer";
 
 export const Header = (props) => {
   const howToPlayVisible = props.howToPlayVisible;
@@ -20,6 +21,9 @@ export const Header = (props) => {
         <li className="li--center">
           <img src={githubLogo} alt="github-logo" />
           <a href="https://github.com/saadniazifed/Photo-Tagging-App">Github</a>
+        </li>
+        <li>
+          <Timer />
         </li>
       </nav>
     </div>
