@@ -4,8 +4,10 @@ import Dog from "../../../media/findCharacters/BrianGriffin.png";
 import Kratos from "../../../media/findCharacters/Kratos.png";
 import Link from "../../../media/findCharacters/Link.png";
 import Tom from "../../../media/findCharacters/Tom.png";
+import greenCheck from "../../../media/greenCheck.png";
 
 export const DropDownModal = (props) => {
+  const chrisFound = props.chrisFound;
   const dropDownHide = props.dropDownHide;
   const characters = props.characters;
   const setChrisFound = props.setChrisFound;
@@ -21,6 +23,7 @@ export const DropDownModal = (props) => {
   const chrisLocation = (e) => {
     const chrisTop = characters[0].ChrisTop;
     const chrisLeft = characters[0].ChrisLeft;
+
     if (
       ((roundTop >= 92 && roundTop <= 94) || roundTop === chrisTop) &&
       ((roundTop >= 91 && roundTop <= 94) || roundLeft === chrisLeft)

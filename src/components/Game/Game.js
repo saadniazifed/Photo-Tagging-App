@@ -22,8 +22,9 @@ export const Game = (props) => {
   const [tomFound, setTomFound] = useState(false);
 
   const top = `${100 * (topCords / height)}`;
-  const left = `${100 * (leftCords / width)}`;
   const roundTop = Math.round(top);
+
+  const left = `${100 * (leftCords / width)}`;
   const roundLeft = Math.round(left);
 
   const charactersRef = collection(db, "character-locations");
@@ -96,11 +97,10 @@ export const Game = (props) => {
               chrisFound
                 ? {
                     display: "block",
-                    position: "absolute",
-                    top: top,
-                    left: left,
                   }
-                : { display: "none" }
+                : {
+                    display: "none",
+                  }
             }
           />
         )}
@@ -158,6 +158,7 @@ export const Game = (props) => {
             left={left}
             roundTop={roundTop}
             roundLeft={roundLeft}
+            chrisFound={chrisFound}
           />
         )}
       </div>
