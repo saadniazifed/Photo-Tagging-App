@@ -21,6 +21,11 @@ export const Game = (props) => {
   const [linkFound, setLinkFound] = useState(false);
   const [tomFound, setTomFound] = useState(false);
 
+  const top = `${100 * (topCords / height)}`;
+  const left = `${100 * (leftCords / width)}`;
+  const roundTop = Math.round(top);
+  const roundLeft = Math.round(left);
+
   const charactersRef = collection(db, "character-locations");
 
   useEffect(() => {
@@ -87,7 +92,16 @@ export const Game = (props) => {
             src={greenCheck}
             alt="chris-found"
             className="chris-green-tick"
-            style={chrisFound ? { display: "block" } : { display: "none" }}
+            style={
+              chrisFound
+                ? {
+                    display: "block",
+                    position: "absolute",
+                    top: top,
+                    left: left,
+                  }
+                : { display: "none" }
+            }
           />
         )}
 
@@ -140,6 +154,10 @@ export const Game = (props) => {
             setKratosFound={setKratosFound}
             setLinkFound={setLinkFound}
             setTomFound={setTomFound}
+            top={top}
+            left={left}
+            roundTop={roundTop}
+            roundLeft={roundLeft}
           />
         )}
       </div>

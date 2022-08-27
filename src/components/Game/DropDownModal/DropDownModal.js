@@ -7,21 +7,16 @@ import Tom from "../../../media/findCharacters/Tom.png";
 
 export const DropDownModal = (props) => {
   const dropDownHide = props.dropDownHide;
-  const leftCords = props.leftCords;
-  const topCords = props.topCords;
-  const width = props.width;
-  const height = props.height;
   const characters = props.characters;
   const setChrisFound = props.setChrisFound;
   const setGriffinFound = props.setGriffinFound;
   const setKratosFound = props.setKratosFound;
   const setLinkFound = props.setLinkFound;
   const setTomFound = props.setTomFound;
-
-  const top = `${100 * (topCords / height)}`;
-  const left = `${100 * (leftCords / width)}`;
-  const roundTop = Math.round(top);
-  const roundLeft = Math.round(left);
+  const top = props.top;
+  const left = props.left;
+  const roundTop = props.roundTop;
+  const roundLeft = props.roundLeft;
 
   const chrisLocation = (e) => {
     const chrisTop = characters[0].ChrisTop;
