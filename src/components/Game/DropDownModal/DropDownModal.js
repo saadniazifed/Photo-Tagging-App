@@ -4,10 +4,8 @@ import Dog from "../../../media/findCharacters/BrianGriffin.png";
 import Kratos from "../../../media/findCharacters/Kratos.png";
 import Link from "../../../media/findCharacters/Link.png";
 import Tom from "../../../media/findCharacters/Tom.png";
-import greenCheck from "../../../media/greenCheck.png";
 
 export const DropDownModal = (props) => {
-  const chrisFound = props.chrisFound;
   const dropDownHide = props.dropDownHide;
   const characters = props.characters;
   const setChrisFound = props.setChrisFound;

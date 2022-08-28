@@ -29,6 +29,12 @@ export const Game = (props) => {
 
   const charactersRef = collection(db, "character-locations");
 
+  // const chrisTop = characters[0].ChrisTop;
+  // console.log(chrisTop);
+  // const chrisLeft = characters[0].ChrisLeft;
+  // console.log(chrisLeft);
+  // console.log(characters[0]);
+
   useEffect(() => {
     const getUsers = async () => {
       const data = await getDocs(charactersRef);
@@ -97,6 +103,9 @@ export const Game = (props) => {
               chrisFound
                 ? {
                     display: "block",
+                    // top: `${chrisTop}%`,
+                    // left: `${chrisLeft}%`,
+                    position: "absolute",
                   }
                 : {
                     display: "none",
