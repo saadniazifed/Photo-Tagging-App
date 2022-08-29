@@ -58,29 +58,29 @@ export const DropDownModal = (props) => {
   };
 
   const linkLocation = (e) => {
-    // const linkTop = characters[3].LinkTop;
-    // const linkLeft = characters[3].LinkLeft;
-    // if (
-    //   ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
-    //   ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
-    // ) {
-    //   setLinkFound(true);
-    //   const parentNode = e.target;
-    //   parentNode.setAttribute("style", "pointer-events: none");
-    // }
+    const linkTop = characters[3].LinkTop;
+    const linkLeft = characters[3].LinkLeft;
+    if (
+      ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
+      ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
+    ) {
+      setLinkFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+    }
   };
 
   const tomLocation = (e) => {
-    // const tomTop = characters[4].TomTop;
-    // const tomLeft = characters[4].TomLeft;
-    // if (
-    //   ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
-    //   ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
-    // ) {
-    //   setTomFound(true);
-    //   const parentNode = e.target;
-    //   parentNode.setAttribute("style", "pointer-events: none");
-    // }
+    const tomTop = characters[4].TomTop;
+    const tomLeft = characters[4].TomLeft;
+    if (
+      ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
+      ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
+    ) {
+      setTomFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+    }
   };
 
   return (

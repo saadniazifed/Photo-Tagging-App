@@ -19,6 +19,8 @@ export const Game = (props) => {
   const [brianLeft, setBrianLeft] = useState(0);
   const [kratosTop, setKratosTop] = useState(0);
   const [kratosLeft, setKratosLeft] = useState(0);
+  const [LinkTop, setLinkTop] = useState(0);
+  const [LinkLeft, setLinkLeft] = useState(0);
 
   const [characters, setCharacters] = useState();
 
@@ -120,6 +122,30 @@ export const Game = (props) => {
     };
 
     getKratosLeft();
+  }, []);
+
+  useEffect(() => {
+    const getLinkTop = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setLinkTop(
+        data.docs[3]._document.data.value.mapValue.fields.LinkTop.integerValue
+        //To access the value from the backend for the `top position`
+      );
+    };
+    getLinkTop();
+  }, []);
+
+  useEffect(() => {
+    const getLinkLeft = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setLinkLeft(
+        data.docs[3]._document.data.value.mapValue.fields.LinkLeft.integerValue
+      );
+    };
+
+    getLinkLeft();
   }, []);
 
   const dropDownVisible = () => {
@@ -233,7 +259,16 @@ export const Game = (props) => {
             src={greenCheck}
             alt="link-found"
             className="link-green-tick"
-            style={linkFound ? { display: "block" } : { display: "none" }}
+            style={
+              linkFound
+                ? {
+                    display: "block",
+                    top: `${LinkTop}%`,
+                    left: `${LinkLeft}%`,
+                    position: "absolute",
+                  }
+                : { display: "none" }
+            }
           />
         )}
 
