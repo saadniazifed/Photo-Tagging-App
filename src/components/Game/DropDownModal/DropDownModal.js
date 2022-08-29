@@ -32,16 +32,16 @@ export const DropDownModal = (props) => {
   };
 
   const griffinLocation = (e) => {
-    // const griffinTop = characters[1].GriffinTop;
-    // const griffinLeft = characters[1].GriffinLeft;
-    // if (
-    //   ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
-    //   ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
-    // ) {
-    //   setGriffinFound(true);
-    //   const parentNode = e.target;
-    //   parentNode.setAttribute("style", "pointer-events: none");
-    // }
+    const griffinTop = characters[1].GriffinTop;
+    const griffinLeft = characters[1].GriffinLeft;
+    if (
+      ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
+      ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
+    ) {
+      setGriffinFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+    }
   };
 
   const kratosLocation = (e) => {

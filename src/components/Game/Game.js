@@ -15,6 +15,8 @@ export const Game = (props) => {
   const [height, setHeight] = useState(0);
   const [chrisTop, setChrisTop] = useState(0);
   const [chrisLeft, setChrisLeft] = useState(0);
+  const [brianTop, setBrianTop] = useState(0);
+  const [brianLeft, setBrianLeft] = useState(0);
 
   const [characters, setCharacters] = useState();
 
@@ -62,10 +64,38 @@ export const Game = (props) => {
         //To access the value from the backend for the `left position`
       );
     };
-    console.log(chrisLeft);
 
     getChrisLeft();
-  }, [charactersRef, chrisLeft]);
+  }, []);
+
+  useEffect(() => {
+    const getBrianTop = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setBrianTop(
+        data.docs[1]._document.data.value.mapValue.fields.GriffinTop
+          .integerValue
+        //To access the value from the backend for the `top position`
+      );
+    };
+    getBrianTop();
+    console.log(brianTop);
+  }, []);
+
+  useEffect(() => {
+    const getBrianLeft = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setBrianLeft(
+        data.docs[1]._document.data.value.mapValue.fields.GriffinLeft
+          .integerValue
+        //To access the value from the backend for the `left position`
+      );
+    };
+
+    getBrianLeft();
+    console.log(brianLeft);
+  }, []);
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -142,7 +172,16 @@ export const Game = (props) => {
             src={greenCheck}
             alt="griffin-found"
             className="griffin-green-tick"
-            style={chrisFound ? { display: "block" } : { display: "none" }}
+            style={
+              chrisFound
+                ? {
+                    display: "block",
+                    top: `${brianTop}%`,
+                    left: `${brianLeft}%`,
+                    position: "absolute",
+                  }
+                : { display: "none" }
+            }
           />
         )}
 
