@@ -13,8 +13,11 @@ export const Game = (props) => {
   const [topCords, setTopCord] = useState(0);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const [chrisTop, setChrisTop] = useState(0);
+  const [chrisLeft, setChrisLeft] = useState(0);
 
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState();
+
   const [chrisFound, setChrisFound] = useState(false);
   const [griffinFound, setGriffinFound] = useState(false);
   const [kratosFound, setKratosFound] = useState(false);
@@ -29,20 +32,40 @@ export const Game = (props) => {
 
   const charactersRef = collection(db, "character-locations");
 
-  // const chrisTop = characters[0].ChrisTop;
-  // console.log(chrisTop);
-  // const chrisLeft = characters[0].ChrisLeft;
-  // console.log(chrisLeft);
-  // console.log(characters[0]);
-
   useEffect(() => {
-    const getUsers = async () => {
+    const getCharacters = async () => {
       const data = await getDocs(charactersRef);
       setCharacters(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getUsers();
+    getCharacters();
+  }, [characters, charactersRef]);
+
+  useEffect(() => {
+    const getChrisTop = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setChrisTop(
+        data.docs[0]._document.data.value.mapValue.fields.ChrisTop.integerValue
+        //To access the value from the backend for the `top position`
+      );
+    };
+    getChrisTop();
   }, []);
+
+  useEffect(() => {
+    const getChrisLeft = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setChrisLeft(
+        data.docs[0]._document.data.value.mapValue.fields.ChrisLeft.integerValue
+        //To access the value from the backend for the `left position`
+      );
+    };
+    console.log(chrisLeft);
+
+    getChrisLeft();
+  }, [charactersRef, chrisLeft]);
 
   const dropDownVisible = () => {
     setShowDropDown(true);
@@ -103,8 +126,8 @@ export const Game = (props) => {
               chrisFound
                 ? {
                     display: "block",
-                    // top: `${chrisTop}%`,
-                    // left: `${chrisLeft}%`,
+                    top: `${chrisTop}%`,
+                    left: `${chrisLeft}%`,
                     position: "absolute",
                   }
                 : {

@@ -21,7 +21,6 @@ export const DropDownModal = (props) => {
   const chrisLocation = (e) => {
     const chrisTop = characters[0].ChrisTop;
     const chrisLeft = characters[0].ChrisLeft;
-
     if (
       ((roundTop >= 92 && roundTop <= 94) || roundTop === chrisTop) &&
       ((roundTop >= 91 && roundTop <= 94) || roundLeft === chrisLeft)
@@ -33,59 +32,55 @@ export const DropDownModal = (props) => {
   };
 
   const griffinLocation = (e) => {
-    const griffinTop = characters[1].GriffinTop;
-    const griffinLeft = characters[1].GriffinLeft;
-
-    if (
-      ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
-      ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
-    ) {
-      setGriffinFound(true);
-      const parentNode = e.target;
-      parentNode.setAttribute("style", "pointer-events: none");
-    }
+    // const griffinTop = characters[1].GriffinTop;
+    // const griffinLeft = characters[1].GriffinLeft;
+    // if (
+    //   ((roundTop >= 71 && roundTop <= 73) || roundTop === griffinTop) &&
+    //   ((roundLeft >= 14 && roundTop <= 16) || roundLeft === griffinLeft)
+    // ) {
+    //   setGriffinFound(true);
+    //   const parentNode = e.target;
+    //   parentNode.setAttribute("style", "pointer-events: none");
+    // }
   };
 
   const kratosLocation = (e) => {
-    const kratosTop = characters[2].KratosTop;
-    const kratosLeft = characters[2].KratosLeft;
-
-    if (
-      ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
-      ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
-    ) {
-      setKratosFound(true);
-      const parentNode = e.target;
-      parentNode.setAttribute("style", "pointer-events: none");
-    }
+    // const kratosTop = characters[2].KratosTop;
+    // const kratosLeft = characters[2].KratosLeft;
+    // if (
+    //   ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
+    //   ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
+    // ) {
+    //   setKratosFound(true);
+    //   const parentNode = e.target;
+    //   parentNode.setAttribute("style", "pointer-events: none");
+    // }
   };
 
   const linkLocation = (e) => {
-    const linkTop = characters[3].LinkTop;
-    const linkLeft = characters[3].LinkLeft;
-
-    if (
-      ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
-      ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
-    ) {
-      setLinkFound(true);
-      const parentNode = e.target;
-      parentNode.setAttribute("style", "pointer-events: none");
-    }
+    // const linkTop = characters[3].LinkTop;
+    // const linkLeft = characters[3].LinkLeft;
+    // if (
+    //   ((roundTop >= 94 && roundTop <= 96) || roundTop === linkTop) &&
+    //   ((roundLeft >= 21 && roundLeft <= 24) || roundLeft === linkLeft)
+    // ) {
+    //   setLinkFound(true);
+    //   const parentNode = e.target;
+    //   parentNode.setAttribute("style", "pointer-events: none");
+    // }
   };
 
   const tomLocation = (e) => {
-    const tomTop = characters[4].TomTop;
-    const tomLeft = characters[4].TomLeft;
-
-    if (
-      ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
-      ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
-    ) {
-      setTomFound(true);
-      const parentNode = e.target;
-      parentNode.setAttribute("style", "pointer-events: none");
-    }
+    // const tomTop = characters[4].TomTop;
+    // const tomLeft = characters[4].TomLeft;
+    // if (
+    //   ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
+    //   ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
+    // ) {
+    //   setTomFound(true);
+    //   const parentNode = e.target;
+    //   parentNode.setAttribute("style", "pointer-events: none");
+    // }
   };
 
   return (
