@@ -17,6 +17,8 @@ export const Game = (props) => {
   const [chrisLeft, setChrisLeft] = useState(0);
   const [brianTop, setBrianTop] = useState(0);
   const [brianLeft, setBrianLeft] = useState(0);
+  const [kratosTop, setKratosTop] = useState(0);
+  const [kratosLeft, setKratosLeft] = useState(0);
 
   const [characters, setCharacters] = useState();
 
@@ -79,7 +81,6 @@ export const Game = (props) => {
       );
     };
     getBrianTop();
-    console.log(brianTop);
   }, []);
 
   useEffect(() => {
@@ -94,7 +95,31 @@ export const Game = (props) => {
     };
 
     getBrianLeft();
-    console.log(brianLeft);
+  }, []);
+
+  useEffect(() => {
+    const getKratosTop = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setKratosTop(
+        data.docs[2]._document.data.value.mapValue.fields.KratosTop.integerValue
+        //To access the value from the backend for the `top position`
+      );
+    };
+    getKratosTop();
+  }, []);
+
+  useEffect(() => {
+    const getKratosLeft = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setKratosLeft(
+        data.docs[2]._document.data.value.mapValue.fields.KratosLeft
+          .integerValue
+      );
+    };
+
+    getKratosLeft();
   }, []);
 
   const dropDownVisible = () => {
@@ -190,7 +215,16 @@ export const Game = (props) => {
             src={greenCheck}
             alt="griffin-found"
             className="kratos-green-tick"
-            style={kratosFound ? { display: "block" } : { display: "none" }}
+            style={
+              kratosFound
+                ? {
+                    display: "block",
+                    top: `${kratosTop}%`,
+                    left: `${kratosLeft}%`,
+                    position: "absolute",
+                  }
+                : { display: "none" }
+            }
           />
         )}
 

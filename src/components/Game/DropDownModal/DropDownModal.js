@@ -45,16 +45,16 @@ export const DropDownModal = (props) => {
   };
 
   const kratosLocation = (e) => {
-    // const kratosTop = characters[2].KratosTop;
-    // const kratosLeft = characters[2].KratosLeft;
-    // if (
-    //   ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
-    //   ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
-    // ) {
-    //   setKratosFound(true);
-    //   const parentNode = e.target;
-    //   parentNode.setAttribute("style", "pointer-events: none");
-    // }
+    const kratosTop = characters[2].KratosTop;
+    const kratosLeft = characters[2].KratosLeft;
+    if (
+      ((roundTop >= 86 && roundTop <= 89) || roundTop === kratosTop) &&
+      ((roundLeft >= 58 && roundLeft <= 62) || roundLeft === kratosLeft)
+    ) {
+      setKratosFound(true);
+      const parentNode = e.target;
+      parentNode.setAttribute("style", "pointer-events: none");
+    }
   };
 
   const linkLocation = (e) => {
