@@ -74,7 +74,7 @@ export const DropDownModal = (props) => {
     const tomTop = characters[4].TomTop;
     const tomLeft = characters[4].TomLeft;
     if (
-      ((roundTop >= 94 && roundTop <= 96) || roundTop === tomTop) &&
+      ((roundTop >= 93 && roundTop <= 96) || roundTop === tomTop) &&
       ((roundLeft >= 84 && roundLeft <= 89) || roundLeft === tomLeft)
     ) {
       setTomFound(true);

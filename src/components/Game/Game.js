@@ -21,6 +21,8 @@ export const Game = (props) => {
   const [kratosLeft, setKratosLeft] = useState(0);
   const [LinkTop, setLinkTop] = useState(0);
   const [LinkLeft, setLinkLeft] = useState(0);
+  const [tomTop, setTomTop] = useState(0);
+  const [tomLeft, setTomLeft] = useState(0);
 
   const [characters, setCharacters] = useState();
 
@@ -146,6 +148,40 @@ export const Game = (props) => {
     };
 
     getLinkLeft();
+  }, []);
+
+  useEffect(() => {
+    const getTomTop = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setTomTop(
+        data.docs[4]._document.data.value.mapValue.fields.TomTop.integerValue
+        //To access the value from the backend for the `top position`
+      );
+
+      console.log(
+        data.docs[4]._document.data.value.mapValue.fields.TomTop.integerValue
+      );
+    };
+    getTomTop();
+    console.log(tomTop);
+  }, []);
+
+  useEffect(() => {
+    const getTomLeft = async () => {
+      const data = await getDocs(charactersRef);
+      data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setTomLeft(
+        data.docs[4]._document.data.value.mapValue.fields.TomLeft.integerValue
+      );
+
+      console.log(
+        data.docs[4]._document.data.value.mapValue.fields.TomLeft.integerValue
+      );
+    };
+
+    getTomLeft();
+    console.log(tomLeft);
   }, []);
 
   const dropDownVisible = () => {
@@ -277,7 +313,16 @@ export const Game = (props) => {
             src={greenCheck}
             alt="tom-found"
             className="tom-green-tick"
-            style={tomFound ? { display: "block" } : { display: "none" }}
+            style={
+              tomFound
+                ? {
+                    display: "block",
+                    top: `${tomTop}%`,
+                    left: `${tomLeft}%`,
+                    position: "absolute",
+                  }
+                : { display: "none" }
+            }
           />
         )}
 
