@@ -21,6 +21,9 @@ This is the [First Firebase Project](https://www.theodinproject.com/lessons/node
 2. validates target locations dynamically by coupling the backend's relative location data of the targets with the frontend's absolute positioning data.
 3. feedback is given to the user when targets are correctly located.
 
+## bugs
+1. Firebase's quota gets exceeded by 50,000 in a small amount of time. After several days of constantly looking at different solutions, the quota keeps on exceeding which doesn't let the backend work as intended. Hence the green check marks that appear on correct findings of the characters don't appear as they are linked with the backend. In the near future i will come back and fix this.
+
 ## areas for improvement
 
 1. improve responsiveness across browsers and devices.
